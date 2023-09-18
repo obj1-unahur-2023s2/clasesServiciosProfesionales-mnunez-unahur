@@ -1,0 +1,55 @@
+import profesionales.*
+import universidades.*
+import empresas.*
+import objetosDePrueba.*
+
+
+describe "Tests de empresa ACME" {
+	const acme = new Empresa(honorarioReferencia = 3500)
+	method initialize() {
+		acme.contratar(juana)
+		acme.contratar(melina)
+		acme.contratar(rocio)
+		acme.contratar(luciana)
+	}
+
+
+	test "dos de sus profesionales estudiaron en Rosario" {
+		assert.equals(2, acme.cantidadProfesionalesQueEstudiaronEn(unr))
+	}
+	test "un@ de sus profesionales estudió en UNAHUR" {
+		assert.equals(1, acme.cantidadProfesionalesQueEstudiaronEn(unahur))
+	}
+
+	test "ningun@ de sus profesionales estudió en Corrientes" {
+		assert.equals(1, acme.cantidadProfesionalesQueEstudiaronEn(unne))
+	}
+
+	test "como profesionales caros, solamente a Rocío" {
+		assert.that(acme.profesionalesCaros().contains(rocio))
+		assert.equals(1, acme.profesionalesCaros().size())
+	}
+
+	test "universidades formadoras: Rosario, Corrientes y Hurlingham" {
+		assert.that(acme.universidadesFormadoras().contains(unr))
+		assert.that(acme.universidadesFormadoras().contains(unne))
+		assert.that(acme.universidadesFormadoras().contains(unahur))
+		assert.equals(3, acme.universidadesFormadoras().size())
+	}
+	
+	test "el profesional mas barato es Juana" {
+		assert.equals(juana, acme.profesionalMasBarato())
+	}
+
+	test "Es de Gente Acotada" {
+		assert.that(acme.esDeGenteAcotada())
+	}
+
+	test "Si agregamos a Luciana dos provincias más no es de gente acotada" {
+		luciana.asignarNuevaProvincia(corrientes)
+		luciana.asignarNuevaProvincia(misiones)
+		assert.notThat(acme.esDeGenteAcotada())
+	}
+
+
+}

@@ -1,0 +1,108 @@
+import profesionales.*
+import universidades.*
+import objetosDePrueba.*
+
+describe "tests de Juana" {
+	test "estudió en la universidad de Rosario" {
+		assert.equals(unr, juana.universidad())
+	}
+	
+	test "puede trabajar solo en Santa fe" {
+		assert.that(juana.provinciasDondePuedeTrabajar().contains(santaFe))
+		assert.equals(1, juana.provinciasDondePuedeTrabajar().size())	
+	}
+	
+	test "cobra lo que recomienda su universidad" {
+		assert.equals(unr.honorarioRecomendado(), juana.honorariosPorHora())
+	}
+	
+}
+
+
+describe "tests de Melina" {
+	test "estudió en la universidad del Noroeste" {
+		assert.equals(unne, melina.universidad())
+	}
+
+	test "puede trabajar en Entre Ríos, Santa Fe y Corrientes" {
+		assert.that(melina.provinciasDondePuedeTrabajar().contains(entreRios))
+		assert.that(melina.provinciasDondePuedeTrabajar().contains(corrientes))
+		assert.that(melina.provinciasDondePuedeTrabajar().contains(santaFe))
+		assert.equals(3, melina.provinciasDondePuedeTrabajar().size())	
+	}
+	
+	test "cobra 3000 pe por hora" {
+		assert.equals(3000, melina.honorariosPorHora())
+	}
+}
+
+
+describe "tests de Rocío" {
+	test "estudió en la UNAHUR" {
+		assert.equals(unahur, rocio.universidad())
+	}
+	test "puede trabajar en Entre Ríos, Santa Fe y Corrientes" {
+		assert.that(rocio.provinciasDondePuedeTrabajar().contains(buenosAires))
+		assert.that(rocio.provinciasDondePuedeTrabajar().contains(cordoba))
+		assert.that(rocio.provinciasDondePuedeTrabajar().contains(santaFe))
+		assert.equals(3, rocio.provinciasDondePuedeTrabajar().size())	
+	}
+	
+	test "cobra 5000 pe por hora" {
+		assert.equals(5000, rocio.honorariosPorHora())
+	}
+
+}
+
+describe "tests de Luciana" {
+	test "estudió en la Universidad de Rosario" {
+		assert.equals(unr, luciana.universidad())
+	}
+	test "puede trabajar en Entre Ríos, Santa Fe y Corrientes" {
+		assert.that(luciana.provinciasDondePuedeTrabajar().contains(entreRios))
+		assert.that(luciana.provinciasDondePuedeTrabajar().contains(santaFe))
+		assert.equals(2, luciana.provinciasDondePuedeTrabajar().size())	
+	}
+	
+	test "cobra 3200 pe por hora" {
+		assert.equals(3200, luciana.honorariosPorHora())
+	}
+
+}
+
+//describe "tests de Lourdes" {
+//	test "estudió en la UNAHUR" {
+//		assert.equals(unahur, lourdes.universidad())
+//	}
+//	test "puede trabajar en Entre Ríos, Santa Fe y Corrientes" {
+//		assert.that(lourdes.provinciasDondePuedeTrabajar().contains(entreRios))
+//		assert.that(lourdes.provinciasDondePuedeTrabajar().contains(santaFe))
+//		assert.that(lourdes.provinciasDondePuedeTrabajar().contains(cordoba))
+//		assert.that(lourdes.provinciasDondePuedeTrabajar().contains(buenosAires))
+//		assert.equals(4, lourdes.provinciasDondePuedeTrabajar().size())	
+//	}
+//	
+//	test "cobra 7000 pe por hora" {
+//		assert.equals(7000, lourdes.honorariosPorHora())
+//	}
+//
+//}
+//
+//
+//describe "tests de Luci" {
+//	test "estudió en la UNAHUR" {
+//		assert.equals(unahur, luci.universidad())
+//	}
+//	
+//	test "puede trabajar solo en Buenos Aires" {
+//		assert.that(luci.provinciasDondePuedeTrabajar().contains(buenosAires))
+//		assert.equals(1, luci.provinciasDondePuedeTrabajar().size())	
+//	}
+//	
+//	test "cobra lo que recomienda su universidad" {
+//		assert.equals(unahur.honorarioRecomendado(), luci.honorariosPorHora())
+//	}
+//	
+//}
+
+
