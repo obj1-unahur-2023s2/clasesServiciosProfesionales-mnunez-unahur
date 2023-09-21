@@ -24,12 +24,12 @@ const juana = new ProfesionalVinculado(universidad = unr)
 const melina = new ProfesionalAsociado(universidad = unne)
 const rocio = new ProfesionalLibre(
 	universidad = unahur,
-	honorario = 5000 ,
+	honorariosPorHora = 5000 ,
 	provincias = #{santaFe, cordoba, buenosAires}
 )
 const luciana = new ProfesionalLibre(
 	universidad = unr,
-	honorario = 3200 ,
+	honorariosPorHora = 3200 ,
 	provincias = #{santaFe, entreRios}
 )
 

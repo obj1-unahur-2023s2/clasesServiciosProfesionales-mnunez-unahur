@@ -1,6 +1,6 @@
 class Empresa {
-	var honorarioReferencia
-	const profesionales = []
+	var property honorarioReferencia = 0
+	const property profesionales = #{}
 	
 	method contratar(empleada) {
 		profesionales.add(empleada)

@@ -70,39 +70,5 @@ describe "tests de Luciana" {
 
 }
 
-//describe "tests de Lourdes" {
-//	test "estudió en la UNAHUR" {
-//		assert.equals(unahur, lourdes.universidad())
-//	}
-//	test "puede trabajar en Entre Ríos, Santa Fe y Corrientes" {
-//		assert.that(lourdes.provinciasDondePuedeTrabajar().contains(entreRios))
-//		assert.that(lourdes.provinciasDondePuedeTrabajar().contains(santaFe))
-//		assert.that(lourdes.provinciasDondePuedeTrabajar().contains(cordoba))
-//		assert.that(lourdes.provinciasDondePuedeTrabajar().contains(buenosAires))
-//		assert.equals(4, lourdes.provinciasDondePuedeTrabajar().size())	
-//	}
-//	
-//	test "cobra 7000 pe por hora" {
-//		assert.equals(7000, lourdes.honorariosPorHora())
-//	}
-//
-//}
-//
-//
-//describe "tests de Luci" {
-//	test "estudió en la UNAHUR" {
-//		assert.equals(unahur, luci.universidad())
-//	}
-//	
-//	test "puede trabajar solo en Buenos Aires" {
-//		assert.that(luci.provinciasDondePuedeTrabajar().contains(buenosAires))
-//		assert.equals(1, luci.provinciasDondePuedeTrabajar().size())	
-//	}
-//	
-//	test "cobra lo que recomienda su universidad" {
-//		assert.equals(unahur.honorarioRecomendado(), luci.honorariosPorHora())
-//	}
-//	
-//}
 
 

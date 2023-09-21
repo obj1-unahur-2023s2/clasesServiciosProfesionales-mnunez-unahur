@@ -1,10 +1,5 @@
 class Universidad {
-	var provincia
+	var property provincia
 	var property honorarioRecomendado
-
-	
-	method provincia() {
-		return provincia
-	}
 }
 
